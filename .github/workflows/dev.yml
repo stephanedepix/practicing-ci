@@ -28,3 +28,9 @@ jobs:
 
       - name: Run tests with Jest
         run: yarn test:ci
+
+      - uses: cypress-io/github-action@v5
+        with:
+          install-command: yarn install
+          start: yarn start
+          command: yarn dlx cypress run
